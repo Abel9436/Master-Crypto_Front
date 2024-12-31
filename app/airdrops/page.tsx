@@ -10,6 +10,7 @@ interface Airdrop {
   name: string
   token_symbol: string
   description: string
+  image: string
   date: string
   reward_date: string
   status: 'upcoming' | 'ongoing' | 'ended'
