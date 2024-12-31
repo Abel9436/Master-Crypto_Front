@@ -18,7 +18,7 @@ export default function FeedbackForm() {
     e.preventDefault()
 
     try {
-      const response = await fetch("http://localhost:8000/feedback/", {
+      const response = await fetch("https://mastercrypto.onrender.com/feedback/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

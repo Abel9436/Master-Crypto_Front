@@ -143,7 +143,9 @@ export default function Navigation() {
           </div>
           <div className="pt-4 pb-3 border-t border-border">
             <div className="flex items-center px-4">
+              {!isSubscribed ? (
               <Button>Join Us Now</Button>
+            ) : null}
               <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon" className="ml-2">

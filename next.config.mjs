@@ -13,6 +13,12 @@ const nextConfig = {
         port: '8000',
         pathname: '/**',
       },
+         {
+        protocol: 'https',
+        hostname: 'mastercrypto.onrender.com',
+    
+        pathname: '/**',
+      },
         ],
         
     }

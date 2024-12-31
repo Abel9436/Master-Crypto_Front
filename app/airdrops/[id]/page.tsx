@@ -53,7 +53,7 @@ export default function AirdropDetailPage() {
   useEffect(() => {
     const fetchAirdrop = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/airdrops/${id}`)
+        const response = await fetch(`https://mastercrypto.onrender.com/airdrops/${id}`)
         if (!response.ok) {
           throw new Error('Failed to fetch airdrop')
         }

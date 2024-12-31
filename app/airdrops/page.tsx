@@ -27,7 +27,7 @@ const AirdropsPage: React.FC = () => {
   useEffect(() => {
     const fetchAirdrops = async () => {
       try {
-        const response = await fetch('http://localhost:8000/airdrops/')
+        const response = await fetch('https://mastercrypto.onrender.com/airdrops/')
         if (!response.ok) {
           throw new Error('Failed to fetch airdrops')
         }
@@ -89,7 +89,7 @@ const AirdropsPage: React.FC = () => {
           <Card key={airdrop.id}>
             <div className="relative h-48">
               <Image
-          src={`http://localhost:8000${airdrop.image}`}
+          src={`https://mastercrypto.onrender.com${airdrop.image}`}
           alt={airdrop.name}
           layout="fill"
           objectFit="cover"
