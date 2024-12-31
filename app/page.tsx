@@ -21,18 +21,16 @@
 //   )
 // }
 
-import Hero from '@/components/Hero'
-import MarketOverview from '@/components/MarketOverview'
-import FeatureHighlights from '@/components/FeatureHighlights'
-import CallToAction from '@/components/CallToAction'
-import Testimonials from '@/components/Testimonials'
-import FeedbackForm from '@/components/FeedbackForm'
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
 
-// Dynamically import components that use client-side features
-const SubscriptionPopup = dynamic(() => import('@/components/SubscriptionPopup'), {
-  ssr: false
-})
+// Dynamically import all components with potential browser-specific code
+const Hero = dynamic(() => import('@/components/Hero'), { ssr: false });
+const MarketOverview = dynamic(() => import('@/components/MarketOverview'), { ssr: false });
+const FeatureHighlights = dynamic(() => import('@/components/FeatureHighlights'), { ssr: false });
+const Testimonials = dynamic(() => import('@/components/Testimonials'), { ssr: false });
+const FeedbackForm = dynamic(() => import('@/components/FeedbackForm'), { ssr: false });
+const CallToAction = dynamic(() => import('@/components/CallToAction'), { ssr: false });
+const SubscriptionPopup = dynamic(() => import('@/components/SubscriptionPopup'), { ssr: false });
 
 export default function Home() {
   return (
@@ -45,6 +43,7 @@ export default function Home() {
       <CallToAction />
       <SubscriptionPopup />
     </div>
-  )
+  );
 }
+
 
